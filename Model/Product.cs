@@ -4,10 +4,32 @@ namespace PcVerwaltung.Model;
 
 public class Product
 {
-    private string Id { get; set; }
+    private string Id { get; } = null!;
     private string Name {get; set;}
-    private string Descripton { get; set; }
-    private List<Component> Components { get; set; }
+    private string EProductType { get; set; }
+    private string Description { get; set; }
+    public List<Component> Components { get; set; }
     private double Price { get; set; }
-    private double Stock { get; set; }
+
+
+    public Product(string id, string name, string eProductType, string description, List<Component> components, double price)
+    {
+        Id = id;
+        Name = name;
+        EProductType = eProductType;
+        Description = description;
+        Components = components;
+        Price = price;
+    }
+
+    public Product(string name , string eProductType, string description, List<Component> components)
+    {
+        Name = name;
+        EProductType = eProductType;
+        Description = description;
+        Components = components;
+        
+        
+    }
 }
+

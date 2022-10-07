@@ -8,8 +8,41 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Views" />
-      <Folder Include="ViewControllers" />
+      <Folder Include="Controller" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="Model\Enums\EPcType.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Dapper" Version="2.0.123" />
+      <PackageReference Include="MySqlConnector" Version="2.1.13" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="Fonts\ProximaNova.otf">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Resources\Images\backButton.png" />
+      <Resource Include="Resources\Images\backButton.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="Resources\Images\logoutButton.png" />
+      <Resource Include="Resources\Images\logoutButton.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="Resources\Images\product.png" />
+      <Resource Include="Resources\Images\product.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="Resources\Images\userProfile.png" />
+      <Resource Include="Resources\Images\userProfile.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Resource>
     </ItemGroup>
 
 </Project>
